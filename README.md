@@ -8,4 +8,5 @@ CONTENTS :
 1. BFS
 2. DFS
 3. HILL CLIMB
-4. 
+4. A* ALGO
+5. 
