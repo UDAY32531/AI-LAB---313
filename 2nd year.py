@@ -1,0 +1,341 @@
+#AI LAB (2nd YEAR 3rd SEM)
+
+# 1 BFS
+"""def bfs(graph, start_node):
+    visited = []
+    queue = [start_node]
+    
+    while queue:
+        current_node = queue.pop(0)
+        
+        if current_node not in visited :
+            print(f"Exploring Node: {current_node}")
+            visited.append(current_node)
+            
+            for neighbour in graph.get(current_node, []):
+                if neighbour not in visited and neighbour not in queue:
+                    queue.append(neighbour)
+                    
+    return visited
+
+print("---Build Your Graph")
+student_graph = {}
+
+num_edges = int(input("How many edges does your graph have?"))
+
+print("Enter each edge separated by a space(e,g., A B):")
+
+for i in range(num_edges):
+    u, v  = input(f"Edge {i + 1}:").split()
+    
+    if u not in student_graph:
+        student_graph[u] = []
+    if v not in student_graph:
+        student_graph[v] = []
+    
+    student_graph[u].append(v)
+    student_graph[v].append(u)
+    
+start = input("Enter the starting node for BFS:")
+
+print(f"\nYour Graph Dictionary: {student_graph}")
+print("Starting BFS Traversal...")
+
+bfs(student_graph, start)"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# PRACTICE 
+
+
+
+
+"""
+class Student:
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+
+    def show_result(self):
+        print(self.name, "scored", self.marks)
+
+s1 = Student("Uday", 85)
+s1.show_result()"""
+
+"""
+l=[0,2,1]
+for i in range(max(l)+2):
+    if i in l :
+        pass
+    else:
+        print("missing number is",i)
+"""
+
+
+"""arr=[1,8,6,2,5,4,8,3,7]
+area=0
+i=0
+j=len(arr)-1
+while(i!=j):
+    h=min(arr[i],arr[j])
+    l=j-i
+    a=h*l
+    area=max(a,area)
+    if arr[i] < arr[j]:
+        i=i+1
+    else:
+        j=j-1
+    print("!\n")
+print(area)"""
+
+#bucket with most water 
+"""arr=[1,8,6,2,5,4,8,3,7]
+area=0
+for i in range(len(arr)):
+    for j in range(i+1,len(arr)):
+        h=min(arr[i],arr[j])
+        l=j-i
+        a=h*l
+        area=max(a,area)
+    print("*")
+print(area)"""
+
+
+
+
+"""x=[-6,-5,4,5,2]
+max=x[0]
+smax=x[1::][0]
+tmax=x[2::][0]
+for i in x:
+    if i<0:
+        i=-i
+    if i >max:
+        tmax=smax
+        smax=max
+        max=i
+    if i<max and i>=smax:
+        tmax=smax
+        smax=i
+    if i<smax and i>=tmax:
+        tmax=i
+
+print(max)
+print(smax)
+print(tmax)
+print(max*smax*tmax)"""
+
+
+
+
+
+
+
+
+"""x=[10,2,1,8,9]
+max=x[0]
+smax=x[1::][0]
+tmax=x[2::][0]
+for i in x:
+    if i >max:
+        tmax=smax
+        smax=max
+        max=i
+    if i<max and i>smax:
+        tmax=smax
+        smax=i
+    if i<smax and i>tmax:
+        tmax=i
+print(max)
+print(smax)
+print(tmax)"""
+
+
+"""print(max)
+print(smax)
+"""
+
+#TO FIND THE MIDDLE MOST ELEMENT IN A LIST 
+"""x=[1,2,3]
+y=[4,5,6,7]
+z=x+y
+if len(z)%2!=0:
+    p=int(len(z)/2)
+    print(z[p])
+else:
+    p=int(len(z)/2)
+    q=int((len(z)/2) -1)
+    print((z[p]+z[q])/2)
+print(z)"""
+
+"""numbers = [1, 2, 3, 4, 5, 6]
+print([i*i for i in numbers if i%2==0])"""
+
+
+"""l=[1,2,3,4,5,6,7,8]
+for i in l:
+    print(i,end=" ")"""
+
+"""print("hello i am uday bhaskar")
+#SELECTION )(*&^%$#@!!@#$%^&*()
+list=[64,22,11,2,1,4]
+n=6
+for i in range(n-1):
+    minindex=i
+    for j in range(i+1,n):
+        if(list[j]<list[minindex]):
+            minindex=j
+        temp=list[i]
+        list[i]=list[minindex]
+        list[minindex]=temp
+print(list)"""
+
+
+
+"""for i in range(6):
+    for j in range(6):
+        if(i==0 or i==5 or j==0 or j==5):
+            print("!",end=" ")
+        else:
+            print("#",end=" ")
+    print(" ")"""
+
+
+from functools import reduce
+"""d=[1,2,3,4,5,6,8,9,10]
+f=filter(lambda x:x%2==0,d)
+m=map(lambda x:x*2,d)
+r=reduce(lambda x,y:x+y,d)
+print(list(f),list(m),r)"""
+
+#find the frequency of each char out put as char:count
+"""x=input("enter a string")
+l=[]
+for i in range(len(x)):
+    if(x[i]not in l):
+        l.append(x[i])
+        print(x[i],x.count(x[i]))"""
+
+#find first non repeating character
+"""s=input("enter a string")
+for i in range(len(s)):
+    if(s.count(s[i])==1):
+        print(s[i])
+        break"""
+
+#Anagram strings
+"""s="listen"
+k="silent"
+c=0
+if len(s)==len(k):
+    for i in s:
+        if i in k:
+            c=c+1
+        else:
+            print("not anagrams")
+            break
+    if(c==len(s)):
+        print("anagram")
+else:
+    print("not anagrams len wise")"""
+
+# Remove duplicate characters in a string
+"""s="udayu 12 12"
+l=[]
+for i in range(len(s)):
+    if(s[i] not in l):
+        l.append(s[i])
+print("".join(l))
+"""
+#palindrome number 
+"""x=int(input("enter a number"))
+rev=0
+x1=x
+while(x>0):
+    r=x%10
+    rev=rev*10+r
+    print(rev)
+    x=x//10
+if(rev==x1):
+    print("palindrome")
+else:
+    print("not a palindrome")
+"""
+#perfect number
+"""x=int(input("enter a number"))
+s=0
+for i in range(1,int(x/2)+1):
+    if (x%i==0 and i%2==0):
+        s=s+i
+if (s==x):
+    print("perfect number")
+else:
+    print("not a perfect  number")"""
+    
+#Wap sort the char of string and first alphabet symbols
+#followed by numberic values za23no -----> anoz23 
+"""s="z a 2  3 n o"
+a=[]
+n=[]
+for i in range(len(s)):
+    if s[i].isalpha():
+        a.append(s[i])
+    else:
+        n.append(s[i])
+print("".join(sorted(a)+sorted(n)))"""
+
+#Wap to print the second largest and second smallest element in a list of
+#10 integers without using sort function
+"""l=[]
+for _ in range(10):
+    l.append(int(input("enter")))
+print(l)    
+for i in range(10):
+    for j in range(10):
+        if l[i]<l[j]:
+            temp=l[i]
+            l[i]=l[j]
+            l[j]=temp
+print(l)
+print("second largest","=",l[8],"second smallest","=",l[1])"""
+
+#Wap to create two lists each containing 5 elements.
+#print both the lists one element from each list combined at a time
+"""a=[1,2,3,4,5]
+b=["a","b","c","d","e"]
+x=[]
+for i in range(5):
+    x.append(a[i])
+    x.append(b[i])
+print(x)"""
+
